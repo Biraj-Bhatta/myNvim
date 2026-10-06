@@ -8,7 +8,7 @@ return {
         tostring(vim.fn.getpid()),
     },
 
-    filetypes = { "cs" },
+    filetypes = { "cs","vb" },
 
     root_markers = {
         ".sln",

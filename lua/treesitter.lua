@@ -4,6 +4,7 @@ local ensure_installed = {
     "cpp",
     "css",
     "javascript",
+    "tsx",
     "go",
     "html",
     "rust",

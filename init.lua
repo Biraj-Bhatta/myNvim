@@ -1,11 +1,10 @@
-vim.o.packlockfile = vim.fn.stdpath("config") .. "/nvim-pack-lock.json"
+-- vim.o.packlockfile = vim.fn.stdpath("config") .. "/nvim-pack-lock.json"
 -- Adding my custom settings and files
 require("theme").setup()
 require("keymap")
 require("settings")
 require("statusLine")
 require("peekErr").setup()
-require("nvHopper").setup()
 require("miscConf")
 
 -- Installing Plugins
@@ -17,6 +16,7 @@ vim.pack.add({
         src = "https://github.com/saghen/blink.cmp",
         version = vim.version.range("*")
     },
+    { src = "https://github.com/tiwari-krishna/nvHopper.nvim" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects", version = "main" },
@@ -25,6 +25,7 @@ vim.pack.add({
 })
 
 -- Plugin Related Configs
+require("nvHopper").setup()
 require("lspConfig")
 require("compl")
 require("fzfLua")
